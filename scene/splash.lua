@@ -5,7 +5,7 @@ local splash = {}
 function splash:load()
 	splashy.addSplash(asset.splash)
 
-	splashy.onComplete(function() end)
+	splashy.onComplete(function() viewer:openScene('menu') end)
 
 end
 

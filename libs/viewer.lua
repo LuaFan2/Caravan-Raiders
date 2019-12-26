@@ -64,7 +64,38 @@ function viewer:nextScene()
 end
 
 function viewer:keypressed(key)
-    self.scenes[self.actualScene][2]:keypressed(key)
+    local scene = self.scenes[self.actualScene][2]
+    local f = scene.keypressed and scene:keypressed(key) or (function() end)
+    
+    f()
+end
+
+function viewer:textinput(key)
+    local scene = self.scenes[self.actualScene][2]
+    local f = scene.textinput and scene:textinput(key) or (function() end)
+    
+    f()
+end
+
+function viewer:mousepressed(x, y, button)
+    local scene = self.scenes[self.actualScene][2]
+    local f = scene.mousepressed and scene:mousepressed(x, y, button) or (function() end)
+    
+    f()
+end
+
+function viewer:mousereleased(x, y, button)
+    local scene = self.scenes[self.actualScene][2]
+    local f = scene.mousereleased and scene:mousereleased(x, y, button) or (function() end)
+    
+    f()
+end
+
+function viewer:wheelmoved(x, y)
+    local scene = self.scenes[self.actualScene][2]
+    local f = scene.wheelmoved and scene:wheelmoved(x, y) or (function() end)
+    
+    f()
 end
 
 function viewer:update(dt)
