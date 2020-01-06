@@ -13,7 +13,9 @@ function Game.create(data)
     local ply = player.create({name = data.name})
     local world = world.create(data.name)
     
-    return ply and world
+    isomap.loadTable(data.name .. '/' .. 'world.data')
+    
+    return true
 end
 
 return Game

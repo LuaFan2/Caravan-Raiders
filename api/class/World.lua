@@ -8,6 +8,8 @@ local World = {}
 function World.generate()
     local world = {textures = asset.textures, props = {}, data = {}, general = {}}
     
+    world.general["name"] = "Map"
+    world.general["version"] = "0.1"
     world.general["lighting"] = "255|255|255"
     
     world["data"] = {

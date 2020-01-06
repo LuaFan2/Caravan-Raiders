@@ -3,11 +3,11 @@ asset = {
     
     textures = {
         {
-          file = "grass.png",
+          file = "assets/tiles/grass.png",
           mnemonic = "grass"
         },
         {
-          file = "water.png",
+          file = "assets/tiles/water.png",
           mnemonic = "water"
         },
     }
