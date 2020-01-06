@@ -387,6 +387,12 @@ Gspot.rem = function(this, element)
 	return table.remove(this.elements, this.getindex(this.elements, element))
 end
 
+Gspot.clear = function(this)
+    while #this.elements > 0 do
+		for k, v in pairs(this.elements) do this:rem(v) end
+	end
+end
+
 Gspot.setfocus = function(this, element)
 	if element then
 		this.focus = element

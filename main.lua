@@ -9,7 +9,7 @@ require 'libs.viewer'
 function love.load(arg)
     asset.splash = love.graphics.newImage(asset.splash)
     
-    viewer:addScene({'splash', 'menu'})
+    viewer:addScene({'splash', 'menu', 'newchar', 'game'})
 end
 
 function love.update(dt)

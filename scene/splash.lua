@@ -6,7 +6,6 @@ function splash:load()
 	splashy.addSplash(asset.splash)
 
 	splashy.onComplete(function() viewer:openScene('menu') end)
-
 end
 
 function splash:keypressed(key)
